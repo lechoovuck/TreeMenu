@@ -1,0 +1,13 @@
+{% load menulist_extras %}
+<a href="{{ menu_item.explicit_url }}"
+   class="list-group-item list-group-item-action {% if menu_item.id in unwrapped_menu_item_ids %} active {% endif %}">{{ menu_item.name }}</a>
+{% if menu_item.children %}
+    <details {% if menu_item.id in unwrapped_menu_item_ids %} open {% endif %}>
+        <summary>
+
+        </summary>
+        {% for child in menu_item.children %}
+            {% draw_menu_item_children child.id %}
+        {% endfor %}
+    </details>
+{% endif %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load menulist_extras %}
+
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <div class="list-group">
+        {% draw_menu 'bigcategory1' %}
+        {% draw_menu 'bigcategory2' %}
+    </div>
+{% endblock %}
