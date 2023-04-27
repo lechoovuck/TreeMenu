@@ -12,6 +12,9 @@
 2. Run _venv_
     * Linux - `source venv\bin\activate`
     * Windows - `venv\Scripts\activate` 
+3. Migrate data from database   
+    `python manage.py makemigrations`   
+    `python manage.py migrate`
 3. Install requirements  
     `pip install -r requirements.txt`
 4. Run django server  
